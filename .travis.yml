@@ -1,0 +1,23 @@
+sudo: required
+services:
+- docker
+env:
+  global: []
+  matrix:
+  - CFG=defconfig VER=v4.17
+  - CFG=defconfig VER=v4.18
+  - CFG=defconfig VER=v4.19
+  - CFG=defconfig VER=v4.20
+
+matrix:
+  allow_failures: []
+
+notifications:
+  email: false
+before_script:
+- git clone https://github.com/torvalds/linux
+- cd linux
+- git checkout $VER
+script:
+- make $CFG
+- make
