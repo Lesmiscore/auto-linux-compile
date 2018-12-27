@@ -15,9 +15,11 @@ matrix:
 notifications:
   email: false
 before_script:
-- git clone https://github.com/torvalds/linux
-- cd linux
-- git checkout $VER
+- apt update
+- apt upgrade gcc
+- wget https://github.com/torvalds/linux/archive/$VER.zip -O linux.zip
+- unzip linux.zip
+- cd linux-$VER
 script:
 - make $CFG
 - make
