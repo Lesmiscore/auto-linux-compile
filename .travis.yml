@@ -15,8 +15,8 @@ matrix:
 notifications:
   email: false
 before_script:
-- apt update
-- apt upgrade gcc
+- sudo apt update
+- sudo apt upgrade gcc
 - wget https://github.com/torvalds/linux/archive/$VER.zip -O linux.zip
 - unzip linux.zip
 - cd linux-$VER
