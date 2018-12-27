@@ -3,6 +3,23 @@ dist: xenial
 env:
   global: []
   matrix:
+  - CFG=defconfig VER=v4.0
+  - CFG=defconfig VER=v4.1
+  - CFG=defconfig VER=v4.2
+  - CFG=defconfig VER=v4.3
+  - CFG=defconfig VER=v4.4
+  - CFG=defconfig VER=v4.5
+  - CFG=defconfig VER=v4.6
+  - CFG=defconfig VER=v4.7
+  - CFG=defconfig VER=v4.8
+  - CFG=defconfig VER=v4.9
+  - CFG=defconfig VER=v4.10
+  - CFG=defconfig VER=v4.11
+  - CFG=defconfig VER=v4.12
+  - CFG=defconfig VER=v4.13
+  - CFG=defconfig VER=v4.14
+  - CFG=defconfig VER=v4.15
+  - CFG=defconfig VER=v4.16
   - CFG=defconfig VER=v4.17
   - CFG=defconfig VER=v4.18
   - CFG=defconfig VER=v4.19
