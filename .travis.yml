@@ -1,6 +1,5 @@
 sudo: required
-services:
-- docker
+dist: xenial
 env:
   global: []
   matrix:
@@ -16,7 +15,7 @@ notifications:
   email: false
 before_script:
 - sudo apt update
-- sudo apt upgrade gcc
+- sudo apt install gcc -y -qq &>/dev/null || true
 - wget https://github.com/torvalds/linux/archive/$VER.zip -O linux.zip
 - unzip linux.zip
 - cd linux-$VER
